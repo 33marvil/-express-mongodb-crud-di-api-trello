@@ -1,0 +1,28 @@
+{
+    "name": "express-mongodb-crud-di-api-trello",
+    "version": "1.0.0",
+    "description": "## Objective:",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon --verbose app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/33marvil/-express-mongodb-crud-di-api-trello.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/33marvil/-express-mongodb-crud-di-api-trello/issues"
+    },
+    "homepage": "https://github.com/33marvil/-express-mongodb-crud-di-api-trello#readme",
+    "dependencies": {
+        "chalk": "^4.0.0",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "morgan": "^1.10.0",
+        "path": "^0.12.7"
+    }
+}
