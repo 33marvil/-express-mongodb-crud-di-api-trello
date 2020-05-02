@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
+<!-- Active URL: https://ondras.zarovi.cz/sql/demo/?keyword=default -->
+<sql>
+<datatypes db="mysql">
+        <group color="rgb(238,238,170)" label="Numeric">
+            <type label="Integer" quote="" re="INT" sql="INTEGER" length="0"/>
+            <type label="Decimal" quote="" re="DEC" sql="DECIMAL" length="1"/>
+            <type label="Single precision" quote="" sql="FLOAT" length="0"/>
+            <type label="Double precision" quote="" re="DOUBLE" sql="DOUBLE" length="0"/>
+        </group>
+       
+        <group color="rgb(255,200,200)" label="Character">
+            <type label="Char" quote="'" sql="CHAR" length="1"/>
+            <type label="Varchar" quote="'" sql="VARCHAR" length="1"/>
+            <type label="Text" quote="'" re="TEXT" sql="MEDIUMTEXT" length="0"/>
+            <type label="Binary" quote="'" sql="BINARY" length="1"/>
+            <type label="Varbinary" quote="'" sql="VARBINARY" length="1"/>
+            <type label="BLOB" quote="'" re="BLOB" sql="BLOB" length="0"/>
+        </group>
+       
+        <group color="rgb(200,255,200)" label="Date &amp; Time">
+            <type label="Date" quote="'" sql="DATE" length="0"/>
+            <type label="Time" quote="'" sql="TIME" length="0"/>
+            <type label="Datetime" quote="'" sql="DATETIME" length="0"/>
+            <type label="Year" quote="" sql="YEAR" length="0"/>
+            <type label="Timestamp" quote="'" sql="TIMESTAMP" length="0"/>
+        </group>
+       
+        <group color="rgb(200,200,255)" label="Miscellaneous">
+            <type label="ENUM" quote="" sql="ENUM" length="1"/>
+            <type label="SET" quote="" sql="SET" length="1"/>
+            <type label="Bit" quote="" sql="bit" length="0"/>
+        </group>
+    </datatypes><table x="1273" y="131" name="Lists">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="name" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="created_at" null="1" autoincrement="0">
+<datatype>TIMESTAMP</datatype>
+<default>NULL</default></row>
+<row name="list_cards" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="board_id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="Boards" row="id" />
+</row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="1476" y="134" name="cards">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="name" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="list_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="Lists" row="id" />
+</row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="1000" y="130" name="Boards">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="name" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="list_lists" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+</sql>
