@@ -17,8 +17,10 @@ const Card = require('../models/Card');
 // testing 
 app.get('/', container.get('mainController'));
 
-// Testing Endpoint Board
+// Endpoint Board
 app.post('/boards', container.get('createDataController', Board));
+app.get('/boards', container.get('getDataController', Board));
+
 
 
 
