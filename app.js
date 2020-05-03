@@ -28,8 +28,10 @@ mongoose.connect(databaseUrl, { dbName: database, useNewUrlParser: true, useUnif
     })
     .catch((err) => console.error(err));
 
+// middleware
 app.use(morgan('combined'));
-
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 //test
 app.get('/', (req, res) => {

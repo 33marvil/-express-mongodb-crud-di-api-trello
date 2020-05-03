@@ -14,7 +14,11 @@ const List = require('../models/List')
 const Card = require('../models/Card');
 
 
+// testing 
+app.get('/', container.get('mainController'));
 
+// Testing Endpoint Board
+app.post('/boards', container.get('createDataController', Board));
 
 
 
