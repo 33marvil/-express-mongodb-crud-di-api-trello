@@ -22,7 +22,7 @@ const api = require('./src/routes/api');
 console.log("**Express Version: ", require('express/package').version);
 
 //setup mongoose and mongoDB
-mongoose.connect(databaseUrl, { dbName: database })
+mongoose.connect(databaseUrl, { dbName: database, useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log('Connection is successful');
     })

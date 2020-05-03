@@ -11,7 +11,7 @@ const app = Router();
 // Testing Model Board, List, Card
 const Board = require('../models/Board');
 const List = require('../models/List')
-constCard = require('../models/Card');
+const Card = require('../models/Card');
 
 
 
