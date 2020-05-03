@@ -8,6 +8,10 @@ const container = require('../../container/container')(services);
 const { Router } = require('express');
 const app = Router();
 
+// Testing Model Board, List, Card
+const Board = require('../models/Board');
+const List = require('../models/List')
+constCard = require('../models/Card');
 
 
 
