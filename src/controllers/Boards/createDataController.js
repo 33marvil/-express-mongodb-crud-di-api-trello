@@ -3,9 +3,7 @@ const mongoose = require('mongoose');
 const createDataController = getData => (req, res, next) => {
     const Board = getData();
     console.log(Board);
-
-    console.log(req.body.name);
-
+    // console.log(req.body.name);
     const newBoard = new Board({
         _id: mongoose.Types.ObjectId(),
         name: req.body.name
