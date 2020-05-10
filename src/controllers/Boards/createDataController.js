@@ -30,12 +30,4 @@ const createDataController = getData => (req, res, next) => {
 }
 
 
-
-
-
-
-
-
-
-
 module.exports = createDataController;
