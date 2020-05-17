@@ -24,6 +24,8 @@ app.get('/boards', container.get('getDataController', Board));
 // Endpoint POST /api/Board + lists/id
 app.post('/boards/:id/lists', container.get('createDataListController', { list: List, board: Board }));
 
+// Endpoint GET /api/Board/ + boardId + /lists/ + list Id
+app.get("/boards/:id/lists", container.get("getAllDataController", Board));
 
 
 
