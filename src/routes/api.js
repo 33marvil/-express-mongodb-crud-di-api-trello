@@ -27,6 +27,9 @@ app.post('/boards/:id/lists', container.get('createDataListController', { list: 
 // Endpoint GET /api/Board/ + boardId + /lists/ + list Id
 app.get("/boards/:id/lists", container.get("getAllDataController", { list: List, board: Board }));
 
+//Trello-APi-Get-List-By-Id
+app.get("/boards/:boardId/lists/:listId", container.get("getListByIdDataController", { list: List, board: Board }));
+
 
 
 module.exports = app;
