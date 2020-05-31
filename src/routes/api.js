@@ -30,6 +30,7 @@ app.get("/boards/:id/lists", container.get("getAllDataController", { list: List,
 //Trello-APi-Get-List-By-Id
 app.get("/boards/:boardId/lists/:listId", container.get("getListByIdDataController", { list: List, board: Board }));
 
-
+// Endpoint PUT API List By Id
+app.put('/boards/:boardId/lists/:listId', container.get("putListByIdDataController", { list: List, board: Board }));
 
 module.exports = app;

@@ -11,6 +11,8 @@ const getAllDataControllerFactory = require('../src/controllers/Lists/getAllData
 
 const getListByIdDataControllerFactory = require('../src/controllers/Lists/getListByIdDataController');
 
+const putListByIdDataControllerFactory = require('../src/controllers/Lists/putListByIdDataController');
+
 
 // require getData services
 const getDataFactory = require('../services/getData');
@@ -39,6 +41,10 @@ const services = {
     getListByIdDataController: (container, data) => {
         const getData = container.get('getData', data);
         return getListByIdDataControllerFactory(getData);
+    },
+    putListByIdDataController: (container, data) => {
+        const getData = container.get('getData', data);
+        return putListByIdDataControllerFactory(getData);
     }
 
 
