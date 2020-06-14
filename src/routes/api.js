@@ -33,4 +33,8 @@ app.get("/boards/:boardId/lists/:listId", container.get("getListByIdDataControll
 // Endpoint PUT API List By Id
 app.put('/boards/:boardId/lists/:listId', container.get("putListByIdDataController", { list: List, board: Board }));
 
+// Endpoint API DELETE List By Id
+app.delete('/boards/:boardId/lists/:listId', container.get("deleteListByIdDataController", { list: List, board: Board }));
+
+
 module.exports = app;
