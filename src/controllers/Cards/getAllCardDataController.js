@@ -19,7 +19,7 @@ const getAllCardDataController = getModel => (req, res, next) => {
         .exec()
         .then(list => {
 
-
+            if (list === null) return res.json({ type: "Not List Found" }).status(500);
             const obj_ids = list.card_lists;
             console.log(list);
 
@@ -42,12 +42,10 @@ const getAllCardDataController = getModel => (req, res, next) => {
 
 
         })
-
-
-
-
-
-
+        .catch((err) => {
+            console.log(`caugth error: ${err}`);
+            return res.status(500).json(err);
+        });
 
 }
 
