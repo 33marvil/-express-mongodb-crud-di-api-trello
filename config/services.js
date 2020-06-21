@@ -17,6 +17,7 @@ const deleteListByIdDataControllerFactory = require('../src/controllers/Lists/de
 
 const createDataCardControllerFactory = require('../src/controllers/Cards/createDataCardController');
 
+const getAllCardDataControllerFactory = require('../src/controllers/Cards/getAllCardDataController');
 
 // require getData services
 const getDataFactory = require('../services/getData');
@@ -57,6 +58,10 @@ const services = {
     createDataCardController: (container, data) => {
         const getData = container.get('getData', data);
         return createDataCardControllerFactory(getData);
+    },
+    getAllCardDataController: (container, data) => {
+        const getData = container.get('getData', data);
+        return getAllCardDataControllerFactory(getData);
     }
 
 
